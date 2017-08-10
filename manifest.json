@@ -1,0 +1,16 @@
+{
+   "background": {
+      "scripts": [ "settings_list.js", "functions.js", "jquery-2.1.0.min.js", "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+   },
+   "description": "Recieve a notification everytime there is an update to your Demandware logs.",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkKksWoJ6/cPIGhP035iPtGTQwXN0f5o39I4IQ9HTp9sSV+hKREe4RIfEcmpK8b+mbmhDZ4M9gQWN70hZq/IkzHntISSTugqgFh1bw1lkahOBXeKBJ2nhUOjdkQr2GhvCSrl7BZ8W8Ro2NkGzBlDrIzRAlHBsKcOGcyk5asvvBD0+Doc33y1EvbhlmO4RBVSWFVpN3Ynh/cXD+rHzW1LncVMWnDF7x1bcOCfU/WiYIqhG6DqtGV5/3dov7HzmFqu+oF7miaX00l71bRzBz4Oa0e24J3odf4Krjalfdj4WUqpDRvKmAHfuYMh/b8r4+3kIfeved5Vwpp9lIfWCs8zgYQIDAQAB",
+   "manifest_version": 2,
+   "name": "Demandware Logs Notifier",
+   "permissions": [ "https://*.demandware.net/", "notifications", "alarms", "storage", "tabs" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.3"
+}

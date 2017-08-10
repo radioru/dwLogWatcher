@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+  <head>
+    <title></title>
+    <style>
+      body {
+        background: rgb(230, 245, 214);
+        min-height: 500px;
+      }
+      .row {
+        clear: both;
+        padding: 3px 0;
+      }
+      fieldset {
+        border: none;
+        min-width: 500px;
+        padding: 0;
+        margin: 0;
+      }
+      .form {
+        padding: 10px;
+      }
+      .form label {
+        display: block;
+        float: left;
+        width: 100px;
+      }
+      .form input[type=text],
+      .form input[type=password] {
+        width: 250px;
+      }
+      .form input[type=checkbox] {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .columns .column {
+        float: left;
+        width: 50%;
+      }
+      h3 {
+        margin: 0;
+        padding: 5px 0;
+        font-size: 16px;
+      }
+      .alert {
+        padding: 10px;
+        background: rgb(103, 167, 36);
+        text-align: center;
+        color: #FFF;
+        margin-bottom: 10px;
+      }
+      .alert.error {
+        background: rgb(216, 56, 49);
+      }
+    </style>
+    <div class="form">
+      <div id="alert"></div>
+    <img src="demandware_logo.png" alt="Demandware">
+    <fieldset>
+      <h3>Server connection</h3>
+      <div class="row">
+        <label for="server">Server</label>
+        <input type="text" name="server" id="server">
+      </div>
+      <div class="row">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username">
+      </div>
+      <div class="row">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+      </div>
+      <h3>Blade settings</h3>
+      <div class="row">
+        <label for="blade-1">Blade 1</label>
+        <select id="blade-1">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+      <div class="row">
+        <label for="blade-2">Blade 2</label>
+        <select id="blade-2">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+      <h3>Logs</h3>
+      <div class="columns">
+        <div class="column">
+          <div class="row">
+            <input type="checkbox" id="log-error">Error
+          </div>
+          <div class="row">
+            <input type="checkbox" id="log-debug">Debug
+          </div>
+           <div class="row">
+            <input type="checkbox" id="log-jobs">Jobs
+          </div>
+          <div class="row">
+            <input type="checkbox" id="log-quota">Quota
+          </div>
+           <div class="row">
+            <input type="checkbox" id="log-api">Api
+          </div>
+          <div class="row">
+            <input type="checkbox" id="log-warn">Warn
+          </div>
+        </div>
+        <div class="column">
+          <div class="row">
+            <input type="checkbox" id="log-customerror">Custom error
+          </div>
+          <div class="row">
+            <input type="checkbox" id="log-customfatal">Custom fatal
+          </div>
+          <div class="row">
+            <input type="checkbox" id="log-custominfo">Custom info
+          </div>
+          <div class="row">
+            <input type="checkbox" id="log-customwarn">Custom warn
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <input type="submit" value="Save" id="save">
+      </div>
+    </fieldset>
+  </div>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: http://developer.chrome.com/extensions/contentSecurityPolicy.html
+     -->
+    <script src="jquery-2.1.0.min.js"></script>
+    <script src="settings_list.js"></script>
+    <script src="functions.js"></script>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+  </body>
+</html>
+
